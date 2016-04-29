@@ -1,1 +1,16 @@
+---
 ansible_ssh_user: ec2-user
+# System
+env_path: /etc/environment
+# Java
+jdk_version: 1.7.0_80
+jdk_home: /usr/java/jdk{{ jdk_version }}
+# Maven
+mvn_home: /usr/share/maven
+# Repository
+repo_host: tag_Name_repo
+oms_prod_repo: /var/www/html/omsprod/
+oms_dev_repo: /var/www/html/omsdev/
+# OMS
+oms_git: https://github.com/MykolaKr/OMS.git
+
