@@ -1,6 +1,6 @@
 ---
 - hosts: tag_Name_repo
-  remote_user: "{{ ansible_user }}"
+  become_user: "{{ ansible_user }}"
   become: yes
 
   roles:
