@@ -4,7 +4,7 @@
 
  # Create repos folder
   - name: Create destination folder and set permissions
-    file: path={{ item }} mode=0775 owner=vagrant group=vagrant state="directory" recurse=yes
+    file: path={{ item }} mode=0775 owner=ec2-user group=ec2-user state="directory" recurse=yes
     with_items:
     - "{{ repo_dir }}"
 

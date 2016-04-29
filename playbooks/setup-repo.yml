@@ -1,8 +1,8 @@
 ---
 - hosts: tag_Name_repo
   connection: local
-  become_user: ec2-user
-  become: yes
+  user: ec2-user
+  sudo: yes
 
   roles:
   - apache2
