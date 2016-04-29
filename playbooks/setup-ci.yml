@@ -1,7 +1,8 @@
 ---
-- hosts: ci
-  remote_user: vagrant
-  become: yes
+- hosts: tag_Name_jenkins
+  connection: local
+  user: ec2-user
+  sudo: yes
 
   roles:
   - setlocalrepo
