@@ -1,9 +1,10 @@
 ---
 - hosts: tag_Name_repo
-  become_user: "{{ ansible_user }}"
+  connection: local
+  become_user: ec2-user
   become: yes
 
   roles:
   - apache2
-  - { role: repository, action: 'download', repo_url: http://www.ex.ua/load/237135585, repo_dir: "{{ _repos }}" }
+  - { role: repository, action: "download", repo_url: "http://www.ex.ua/load/237135585", repo_dir: "{{ _repos }}" }
 
