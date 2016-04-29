@@ -1,0 +1,9 @@
+---
+- hosts: db1
+  sudo: yes
+  user: root
+
+  roles:
+      # install not needed now
+      - { role: mysql, action: 'create-database', database_name: 'oms' }
+

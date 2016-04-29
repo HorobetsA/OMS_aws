@@ -1,0 +1,10 @@
+---
+# task file for MySQL role
+
+- include: install.yml
+
+- include: "{{ action }}.yml"
+  when: action is defined
+
+- include: replication.yml
+  when: replication|lower() == 'yes'

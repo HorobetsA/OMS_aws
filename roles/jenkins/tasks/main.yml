@@ -1,0 +1,4 @@
+---
+- include: install.yml
+- include: plugins.yml
+  when: jenkins_plugin is defined

@@ -1,0 +1,17 @@
+# -- Jenkins Section OMS Role --
+jenkins_security_user: devops
+# Config files templates
+_jenkins_cfg:
+  - config.xml
+  - hudson.tasks.Maven.xml
+  - jenkins.mvn.GlobalMavenConfig.xml
+  - jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml
+  - org.jenkinsci.plugins.sysloglogger.SyslogLoggerPlugin.xml
+# Jenkins Jobs
+_jenkins_jbs:
+  - oms-master
+  - oms-dev
+  - deploy_OMS
+# Jenkins Plugins Cfg
+syslog_srv: 127.0.0.1
+syslog_prt: 514
