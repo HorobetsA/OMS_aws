@@ -3,8 +3,8 @@
 - name: Install MySQL and Python Library
   yum: name={{ item }} state=present
   with_items:
-    - mariadb-server
-    - MySQL-python
+    - MariaDB-server
+    - MySQL-python26
 
 - name: Give access for remote clients
   ini_file: dest=/etc/my.cnf.d/server.cnf
@@ -14,7 +14,7 @@
             backup=yes
 
 - name: Start MySQL Server 
-  service: name=mariadb state=started enabled=yes
+  service: name=mysql state=started enabled=yes
 
 - name: Change passwords to root user
   mysql_user: name=root host={{ item }} password={{ root_db_password }}

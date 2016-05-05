@@ -2,9 +2,9 @@
     stat: path=/etc/yum.repos.d/localrepo.repo
     register: lr
 
-  - name: Remove current repos
-    shell: sudo mv /etc/yum.repos.d/*.repo /tmp
-    when: not lr.stat.exists
+ # - name: Remove current repos
+ #   shell: sudo mv /etc/yum.repos.d/*.repo /tmp
+ #   when: not lr.stat.exists
 
   - name: Copy localrepo
     template: src=../templates/repo.repo.j2 dest= dest=/etc/yum.repos.d/{{ item }}.repo owner=root group=root mode=0644
