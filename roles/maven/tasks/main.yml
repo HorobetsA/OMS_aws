@@ -1,6 +1,6 @@
 ---
 - name: Install Maven
-  yum: state=present name=maven
+  yum: state=present name=apache-maven
 
 - name: Modify environment
   lineinfile:  dest="{{ env_path }}"  line='{{ item }}'
