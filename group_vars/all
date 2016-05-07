@@ -6,9 +6,9 @@ env_path: /etc/environment
 jdk_version: 1.7.0_80
 jdk_home: /usr/java/jdk{{ jdk_version }}
 # Maven
-mvn_home: /usr/share/maven
+mvn_home: /usr/share/apache-maven
 # Repository
-repo_host: tag_Name_repo
+repo_host: 172.31.32.237
 oms_prod_repo: /var/www/html/omsprod/
 oms_dev_repo: /var/www/html/omsdev/
 # OMS
