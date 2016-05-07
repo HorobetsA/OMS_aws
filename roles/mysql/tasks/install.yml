@@ -16,12 +16,12 @@
 - name: Start MySQL Server 
   service: name=mysqld state=started enabled=yes
 
-# name: Change passwords to root user
-# mysql_user: name=root host={{ item }} password={{ root_db_password }}
-# with_items:
-# - 127.0.0.1
-# - ::1
-# - localhost
+ name: Change passwords to root user
+ mysql_user: name=root host={{ item }} password={{ root_db_password }}
+ with_items:
+ - 127.0.0.1
+ - ::1
+ - localhost
 
 - name: Check if MySQL root password changed
   stat: path={{ mysql_password_file }}
