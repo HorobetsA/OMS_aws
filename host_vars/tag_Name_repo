@@ -1,0 +1,10 @@
+repo_url: http://www.ex.ua/load/237135585
+main_repo: /var/www/html/localrepo/
+
+oms_prod_repo: /var/www/html/omsprod/
+oms_dev_repo: /var/www/html/omsdev/
+
+_repos:
+    - "{{ main_repo }}"
+    - "{{ oms_prod_repo }}"
+    - "{{ oms_dev_repo }}"
