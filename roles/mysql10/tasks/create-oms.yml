@@ -1,6 +1,11 @@
 ---
 #- name: include Name
 #  include_vars: ./../roles/mysql10/vars/main.yml
+
+- name: Name databases  OMS APP
+  debug: 'msg="{{ item.name }}"'
+  with_items: oms_mysql_db
+  
 - name: create the databases  OMS APP
   mysql_db: name={{ item.name }} 
             collation="utf8_general_ci"

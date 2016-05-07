@@ -1,9 +1,9 @@
 ---
-- hosts: database
+- hosts: tag_Name_database
   sudo: yes
   user: root
 
   roles:
       # 
-      - { role: mysql10, action: 'create-oms', replicate: 'yes' }
+      - { role: mysql10, action: 'create-oms', replicate: 'no' }
 
