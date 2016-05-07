@@ -1,6 +1,7 @@
 ---
-- hosts: webapp
-  remote_user: "{{ ansible_user }}"
+- hosts: tag_Name_web
+  connection: local
+  become_user: root
   become: yes
 
   roles:
