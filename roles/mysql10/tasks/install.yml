@@ -3,12 +3,6 @@
   yum: name={{ item }} state=installed
   with_items: 
     - libselinux-python
-- name: Turn Off Selinux
-  selinux: state=disabled
-  sudo: yes
-  notify:
-    - restart machine
-    - waiting for server to come back
 
 - name: Remove MariaDB ver 5.5
   yum: state=removed name=mariadb-server

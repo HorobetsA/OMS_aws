@@ -9,7 +9,7 @@ mysql_enabled: 'yes'
 mysql_password_file: /root/mysqlpass
 
 #replication: yes
-mysql_replication_master: db1
+mysql_replication_master: tag_Name_db_master
 replic_user: replic_user
 replic_userpassword: 123
 replic_db: omsdb

@@ -1,6 +1,6 @@
 ---
-- name: Create dynamic MySQL variables.
-  set_fact:  mysql_replication_master={{ groups['database'][0] }}
+#- name: Create dynamic MySQL variables.
+#  set_fact:  mysql_replication_master={{ groups['database'][0] }}
 - name: show variables
   debug: msg={{  mysql_replication_master }} 
   debug: msg={{ inventory_hostname }} 

@@ -1,7 +1,7 @@
 ---
-- hosts: tag_Name_database
+- hosts: tag_Name_db_master,tag_Name_db_slave
+  connection: local
   sudo: yes
-  user: root
 
   roles:
       # 
