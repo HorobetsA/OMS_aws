@@ -1,8 +1,7 @@
 ---
 
-- name: Ensure Service is Started and Enabled
-  service: name=mysql state=started enabled=yes
-  sudo: yes
+#- name: Ensure Service is Started and Enabled
+#  service: name=mysql state=started enabled=yes
  
 
 - name: Modify configuration file - gtid_domain_id

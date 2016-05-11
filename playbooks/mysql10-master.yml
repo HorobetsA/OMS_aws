@@ -1,0 +1,8 @@
+---
+- hosts: tag_Name_db_master
+  connection: local
+  sudo: yes
+  roles:
+      # 
+      - { role: mysql10, action: 'create-oms', replicate: 'yes' }
+

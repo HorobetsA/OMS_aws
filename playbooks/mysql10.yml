@@ -1,9 +1,14 @@
 ---
-- hosts: tag_Name_db_master,tag_Name_db_slave
+- hosts: tag_Name_db_master
   connection: local
   sudo: yes
-
   roles:
       # 
       - { role: mysql10, action: 'create-oms', replicate: 'no' }
 
+- hosts: tag_Name_db_slave
+  connection: local
+  sudo: yes
+  roles:
+      # 
+      - { role: mysql10, action: 'create-oms', replicate: 'no' }

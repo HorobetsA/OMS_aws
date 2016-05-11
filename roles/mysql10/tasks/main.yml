@@ -6,5 +6,16 @@
 - include: "{{ action }}.yml"
   when: action is defined
 
-- include: replication.yml
-  when: replicate is defined and replicate|lower() == 'yes'
+- name: show variables slave
+  debug: msg={{ ec2_tag_Name }} 
+
+#- include: replication.yml
+#  when: replicate is defined and replicate|lower() == 'yes'
+#  when: replicate|lower()=='yes' and {{ ec2_tag_Name }}=="db_slave"
+
+- include: start_master.yml
+  when: replicate|lower()=='yes' and {{ ec2_tag_Name }}=="db_master"
+
+- include: start_slave.yml
+  when: replicate|lower()=='yes' and {{ ec2_tag_Name }}=="db_slave"
+
